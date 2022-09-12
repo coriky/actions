@@ -1,0 +1,15 @@
+on:
+  push:
+    branches:
+      new-test
+    pull_request:
+
+permissions: write-all
+jobs:
+  test-auto-approve:
+    name: test-auto-approve
+    runs-on: ubuntu-latest
+    steps:
+      - name: filler
+        run: echo "this is a filler"
+ 
