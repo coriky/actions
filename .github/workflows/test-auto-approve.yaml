@@ -18,7 +18,7 @@ jobs:
           curl \
             -X POST \
             -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/coriky/actions/pulls"
+            "https://api.github.com/repos/coriky/actions/pulls" \
             -d '{"title": "new PR from GHA", "body": "PRR BODY", "head": "actions/test-new", "base": "main"}'
  
       
