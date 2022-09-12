@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      new-test
+      new-code
   pull_request:
 
 permissions: write-all
@@ -19,7 +19,7 @@ jobs:
             -X POST \
             -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/coriky/actions/pulls" \
-            -d '{"title": "new PR from GHA", "body": "PRR BODY", "head": "new-test", "base": "main"}'
+            -d '{"title": "new PR from GHA", "body": "PRR BODY", "head": "new-code", "base": "main"}'
             
             
       - name: approve PR
