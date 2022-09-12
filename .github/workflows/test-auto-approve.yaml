@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      new-test
+      new-code
   pull_request:
 
 permissions: write-all
