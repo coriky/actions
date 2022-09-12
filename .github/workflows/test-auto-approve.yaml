@@ -29,6 +29,15 @@ jobs:
             -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/coriky/actions/pulls/${{ github.event.number }}/reviews" \
             -d '{"event": "APPROVE"}'
+        
+      - name: merge pR
+        run: |
+          curl \
+            -X PUT \
+            -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/coriky/actions/pulls/${{ github.event.number }}/merge" 
+            
+          
             
       
       
