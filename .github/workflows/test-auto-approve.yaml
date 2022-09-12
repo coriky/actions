@@ -2,7 +2,7 @@ on:
   push:
     branches:
       new-test
-    pull_request:
+  pull_request:
 
 permissions: write-all
 jobs:
